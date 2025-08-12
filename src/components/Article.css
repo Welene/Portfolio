@@ -1,0 +1,7 @@
+.article {
+	border: 2px solid rgb(170, 170, 170);
+	border-radius: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}

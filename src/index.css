@@ -1,0 +1,144 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* forelder til ul-listen og h1-tittelen */
+/* .app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	min-height: 100vh;
+	width: 100vw;
+	background-color: rgb(14, 14, 14);
+}
+
+.appWrapper {
+	max-width: 1100px;
+	min-height: 100vh;
+	flex: 1;
+	margin: 0 auto;
+	background-color: rgb(12, 12, 12);
+	padding: 0 20px;
+	box-sizing: border-box;
+} */
+
+.parallax_wrapper {
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 300px; /* z-akse = fram og tilbake, 3D inn og ut, e kameraet nært eller langt unna, kor vi ser det fra*/
+}
+
+.parallax_group.intro_screen {
+	height: 100vh;
+	background-color: rgb(24, 24, 24);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('./assets/me.jpg');
+	background-size: stretch; /* scale image to fit inside container */
+	background-position: center;
+}
+
+.parallax_group.outro_screen {
+	height: 100vh;
+	background-color: lightskyblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ALT ER OK SÅ LANGT*/
+
+.parallax_group {
+	position: relative;
+	/* pos. er relativ til page, senere skal vi ha komponenter som har position absolute inni her - parallax-group wrapper disse komponentene*/
+	height: 100vh;
+	transform-style: preserve-3d;
+
+	/* når vi gir siden depth fra kamera-perspektivet vi har valgt, tar den avre å¨det 3D perspektivet fordi noen nettlesere gjør det flatt  */
+}
+
+.parallax_group .parallax_layer {
+	position: absolute;
+	inset: 0;
+	/* right, top, left & bottom = 0 - vi vil at layeret skal stretche helt til toppen, høyre, venstre og bottom */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.base_layer {
+	transform: translateZ(-300px) scale(2);
+}
+
+.mid_layer {
+	transform: translateZ(
+		0
+	); /* flyttes ikke noen steder, scroller like  fort som vi scroller*/
+}
+
+.top_layer {
+	transform: translateZ(200px) scale(0.3);
+}
+
+#intro {
+	z-index: 0;
+}
+
+#group-1 {
+	z-index: -1;
+}
+
+#group-1 > .base_layer {
+	background-color: purple;
+}
+
+#group-2 > .mid_layer {
+	background-color: green;
+}
+
+#group-2 {
+}
+
+#outro {
+}
+
+/* .mainContainer {
+	width: 100%;
+} */
+
+h1 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2.5rem;
+	color: red;
+}
+
+h2 {
+	color: red;
+}
+
+/* ul {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	list-style: none;
+	width: 50%;
+}
+
+li {
+	flex: 1;
+	border: 1px solid black;
+	text-align: center;
+	padding: 1rem;
+	font-size: 1.25rem;
+}
+*/
+
+p {
+	color: red;
+}
