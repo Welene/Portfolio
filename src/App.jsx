@@ -6,31 +6,14 @@ import Footer from './components/Footer';
 function App() {
 	return (
 		<div className="parallax_wrapper">
-			<section id="intro" className="parallax_group intro_screen">
+			<header id="intro" className="parallax_group intro_screen">
 				<h1>Helene sitt portfolio</h1>
-			</section>
+			</header>
+			<Main />
 
-			<section id="group-1" className="parallax_group">
-				<div className="parallax_layer base_layer">
-					<p>Base Layer Page</p>
-				</div>
-				<div className="parallax_layer mid_layer">
-					<p>Mid Layer Page</p>
-				</div>
-			</section>
-
-			<section id="group-2" className="parallax_group">
-				<div className="parallax_layer mid_layer">
-					<p>Another Mid Layer Page</p>
-				</div>
-				<div className="parallax_layer top_layer">
-					<p>Top Layer Page</p>
-				</div>
-			</section>
-
-			<section id="outro" className="parallax_group outro_screen">
+			<footer id="outro" className="parallax_group outro_screen">
 				<p>Thank you for scrolling!</p>
-			</section>
+			</footer>
 			{/* 
 			<main className="app">
 				<section className="appWrapper">
