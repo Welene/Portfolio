@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+body {
+	background-color: rgb(26, 26, 26);
+}
+
 /* forelder til ul-listen og h1-tittelen */
 /* .app {
 	display: flex;
@@ -33,9 +37,16 @@
 	perspective: 300px;
 	/* z-akse = fram og tilbake, 3D inn og ut, e kameraet nært eller langt unna, kor vi ser det fra */
 	max-width: 1100px;
+	/* min-width: 1100px; */
 	min-height: 100vh;
-	flex: 1;
+	/* flex: 1; */
 	margin: 0 auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.parallax_wrapper::-webkit-scrollbar {
+	display: none;
 }
 
 main {
@@ -69,6 +80,7 @@ main {
 	/* pos. er relativ til page, senere skal vi ha komponenter som har position absolute inni her - parallax-group wrapper disse komponentene*/
 	height: 100vh;
 	transform-style: preserve-3d;
+	/* width: 100%; */
 
 	/* når vi gir siden depth fra kamera-perspektivet vi har valgt, tar den avre å¨det 3D perspektivet fordi noen nettlesere gjør det flatt  */
 }
@@ -83,7 +95,10 @@ main {
 }
 
 .base_layer {
-	transform: translateZ(-300px) scale(2);
+	transform: translateZ(-200px) scale(2);
+	/* width: 100vw; */
+	left: 0;
+	right: 0;
 }
 
 .mid_layer {
@@ -105,14 +120,15 @@ main {
 }
 
 #group-1 > .base_layer {
-	background-color: purple;
+	background-color: rgb(26, 26, 26);
 }
 
 #group-2 > .mid_layer {
-	background-color: green;
+	background-color: rgb(48, 48, 48);
 }
 
-#group-2 {
+#group-3 > .base_layer {
+	background-color: rgb(26, 26, 26);
 }
 
 #outro {
@@ -124,12 +140,12 @@ main {
 
 h1 {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 2.5rem;
-	color: red;
+	font-size: 2rem;
+	color: white;
 }
 
 h2 {
-	color: red;
+	color: white;
 }
 
 /* ul {
@@ -148,7 +164,3 @@ li {
 	font-size: 1.25rem;
 }
 */
-
-p {
-	color: red;
-}

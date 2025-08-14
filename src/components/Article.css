@@ -1,7 +1,31 @@
 .article {
-	border: 2px solid rgb(170, 170, 170);
+	box-shadow: 0px 0px 6px 1px rgb(90, 90, 90);
 	border-radius: 0.3rem;
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
+	max-width: 40rem;
+	min-width: 25rem;
+	min-height: 15rem;
+	gap: 1rem;
+}
+
+.article_title {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+	font-size: 2rem;
+	font-style: bold;
+	color: white;
+	margin-bottom: 0.5rem;
+}
+
+.article_text {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+	font-size: 1.2rem;
+	color: white;
+	letter-spacing: 0.05rem;
 }
