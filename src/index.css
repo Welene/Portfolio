@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: rgb(26, 26, 26);
+	background-color: rgb(19, 19, 19);
 }
 
 /* forelder til ul-listen og h1-tittelen */
@@ -36,7 +36,7 @@ body {
 	overflow-y: auto;
 	perspective: 300px;
 	/* z-akse = fram og tilbake, 3D inn og ut, e kameraet nært eller langt unna, kor vi ser det fra */
-	max-width: 1100px;
+	/* max-width: 1100px; */
 	/* min-width: 1100px; */
 	min-height: 100vh;
 	/* flex: 1; */
@@ -55,14 +55,15 @@ main {
 }
 
 .parallax_group.intro_screen {
-	height: 100vh;
+	height: 80vh;
 	background-color: rgb(24, 24, 24);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url('./assets/me.jpg');
-	background-size: stretch; /* scale image to fit inside container */
+	background-image: url('./assets/meg4.png');
+	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .parallax_group.outro_screen {
@@ -78,7 +79,7 @@ main {
 .parallax_group {
 	position: relative;
 	/* pos. er relativ til page, senere skal vi ha komponenter som har position absolute inni her - parallax-group wrapper disse komponentene*/
-	height: 100vh;
+	height: 90vh;
 	transform-style: preserve-3d;
 	/* width: 100%; */
 
@@ -119,19 +120,25 @@ main {
 	z-index: -1;
 }
 
+#group-2 {
+	height: 100vh;
+}
+
 #group-1 > .base_layer {
-	background-color: rgb(26, 26, 26);
+	background-color: rgb(19, 19, 19);
 }
 
 #group-2 > .mid_layer {
 	background-color: rgb(48, 48, 48);
+	/* padding-bottom: 20rem; */
+}
+
+#group-2 .mid_layer .infoContainer {
+	margin-top: -25rem;
 }
 
 #group-3 > .base_layer {
-	background-color: rgb(26, 26, 26);
-}
-
-#outro {
+	background-color: rgb(19, 19, 19);
 }
 
 /* .mainContainer {
@@ -147,20 +154,3 @@ h1 {
 h2 {
 	color: white;
 }
-
-/* ul {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-	list-style: none;
-	width: 50%;
-}
-
-li {
-	flex: 1;
-	border: 1px solid black;
-	text-align: center;
-	padding: 1rem;
-	font-size: 1.25rem;
-}
-*/
