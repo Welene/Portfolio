@@ -4,7 +4,9 @@ function App() {
 	return (
 		<div className="parallax_wrapper">
 			<header id="intro" className="parallax_group intro_screen">
-				<h1>Helene sitt portfolio</h1>
+				<h1 className="intro_screen__title">
+					Hi, I'm a Frontend student!
+				</h1>
 			</header>
 			<Main />
 

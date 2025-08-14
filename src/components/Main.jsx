@@ -1,4 +1,5 @@
 import Section from '../components/Section';
+import IconContainer from './IconContainer';
 
 function Main() {
 	return (
@@ -16,11 +17,11 @@ function Main() {
 			<section id="group-2" className="parallax_group">
 				<div className="parallax_layer mid_layer">
 					{/* <p>Another Mid Layer Page</p> */}
-					<Section />
+					<IconContainer />
 				</div>
-				{/* <div className="parallax_layer top_layer">
-					<p>Top Layer Page</p>
-				</div> */}
+				<div className="parallax_layer top_layer">
+					<p className="top-layer__text">Top Layer Page</p>
+				</div>
 			</section>
 			<section id="group-3" className="parallax_group">
 				<div className="parallax_layer base_layer">

@@ -30,6 +30,15 @@ body {
 	box-sizing: border-box;
 } */
 
+.intro_screen__title {
+	font-size: 2.5rem;
+	box-shadow: 0px 0px 50px 0px rgb(71, 71, 71);
+	border-radius: 0.3rem;
+	padding: 1rem;
+	margin-top: 15rem;
+	/* margin-left: 65rem; */
+}
+
 .parallax_wrapper {
 	height: 100vh;
 	overflow-x: hidden;
@@ -64,11 +73,12 @@ main {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	box-shadow: 1px 1px 10px 5px rgb(37, 37, 37);
 }
 
 .parallax_group.outro_screen {
-	height: 100vh;
-	background-color: lightskyblue;
+	height: 80vh;
+	background-color: rgb(114, 114, 114);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -79,7 +89,7 @@ main {
 .parallax_group {
 	position: relative;
 	/* pos. er relativ til page, senere skal vi ha komponenter som har position absolute inni her - parallax-group wrapper disse komponentene*/
-	height: 90vh;
+	height: 70vh;
 	transform-style: preserve-3d;
 	/* width: 100%; */
 
@@ -110,6 +120,13 @@ main {
 
 .top_layer {
 	transform: translateZ(200px) scale(0.3);
+	z-index: 999;
+	/* funke ikke */
+}
+
+.top-layer__text {
+	font-size: 2rem;
+	color: white;
 }
 
 #intro {
@@ -118,14 +135,15 @@ main {
 
 #group-1 {
 	z-index: -1;
+	height: 85vh;
 }
 
 #group-2 {
-	height: 100vh;
+	height: 80vh;
 }
 
 #group-1 > .base_layer {
-	background-color: rgb(19, 19, 19);
+	background-color: rgb(8, 8, 8);
 }
 
 #group-2 > .mid_layer {
@@ -137,8 +155,12 @@ main {
 	margin-top: -25rem;
 }
 
+#group-3 .mid_layer .infoContainer {
+	margin-top: 1rem;
+}
+
 #group-3 > .base_layer {
-	background-color: rgb(19, 19, 19);
+	background-color: rgb(8, 8, 8);
 }
 
 /* .mainContainer {
@@ -149,6 +171,7 @@ h1 {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 2rem;
 	color: white;
+	background-color: rgba(169, 115, 182, 0.6);
 }
 
 h2 {
