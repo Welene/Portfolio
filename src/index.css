@@ -126,8 +126,126 @@ main {
 
 .top-layer__text {
 	font-size: 2rem;
-	color: white;
+	color: rgb(241, 241, 241);
 }
+
+/* .top-layer__blob {
+	width: 400px;
+	height: 400px;
+} */
+
+/* BLOB SECTION GROUP 1 -- BASE LAYER  */
+
+.blob_section {
+	display: flex;
+	width: 50%;
+	height: 50%;
+}
+
+.blob_section img:nth-child(1) {
+	align-self: flex-start;
+	order: 1;
+}
+
+.blob_section img:nth-child(2) {
+	align-self: flex-end;
+	order: 2;
+	transform: scale(1.5);
+	margin-left: 3rem;
+}
+.blob_section img:nth-child(3) {
+	align-self: flex-start;
+	order: 3;
+	margin-left: auto;
+	transform: scale(1);
+}
+
+.base_layer .blob_section img {
+	/* transform: scale(0.8); */
+	max-width: 200px;
+}
+
+/* BLOB SECTION GROUP 3 -- BASE LAYER  */
+
+.blob_section-2 {
+	display: flex;
+	width: 50%;
+	height: 50%;
+}
+
+.blob_section-2 img:nth-child(1) {
+	align-self: flex-end;
+	order: 1;
+	transform: scale(1.2);
+}
+
+.blob_section-2 img:nth-child(2) {
+	align-self: flex-start;
+	order: 2;
+	transform: scale(1.2);
+}
+.blob_section-2 img:nth-child(3) {
+	align-self: flex-end;
+	order: 3;
+	transform: scale(1.2);
+}
+
+.blob_section-2 img:nth-child(4) {
+	align-self: flex-start;
+	transform: scale(1.6);
+	order: 4;
+	margin-left: auto;
+}
+
+.base_layer .blob_section-2 img {
+	/* transform: scale(0.8); */
+	max-width: 200px;
+}
+
+/* BLOB MOVEMENT */
+
+@keyframes floatAndBreathe {
+	0% {
+		transform: translateY(0) scale(1);
+	}
+	50% {
+		transform: translateY(20px) scale(1.08);
+	}
+	100% {
+		transform: translateY(0) scale(1);
+	}
+}
+
+.blob_section img,
+.blob_section-2 img {
+	animation-name: floatAndBreathe;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+.blob_section__blob1 {
+	animation-delay: 0s;
+}
+
+.blob_section__blob2 {
+	animation-delay: 3s;
+}
+
+.blob_section__blob3 {
+	animation-delay: 13s;
+}
+
+.blob_section__blob4 {
+	animation-delay: 1s;
+}
+.blob_section__blob5 {
+	animation-delay: 5s;
+}
+.blob_section__blob6 {
+	animation-delay: 9s;
+}
+
+/* BLOB SECTION -- DONE  */
 
 #intro {
 	z-index: 0;
@@ -170,10 +288,10 @@ main {
 h1 {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 2rem;
-	color: white;
+	color: rgb(241, 241, 241);
 	background-color: rgba(169, 115, 182, 0.6);
 }
 
 h2 {
-	color: white;
+	color: rgb(241, 241, 241);
 }

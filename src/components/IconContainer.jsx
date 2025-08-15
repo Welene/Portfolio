@@ -21,20 +21,6 @@ function IconContainer() {
 			</figure>
 			<figure className="icon-container__logo">
 				<img
-					src={figmaIcon}
-					alt="CSS Icon"
-					className="icon-container__icon"
-				/>
-			</figure>
-			<figure className="icon-container__logo">
-				<img
-					src={gitIcon}
-					alt="CSS Icon"
-					className="icon-container__icon"
-				/>
-			</figure>
-			<figure className="icon-container__logo">
-				<img
 					src={htmlIcon}
 					alt="CSS Icon"
 					className="icon-container__icon"
@@ -49,14 +35,15 @@ function IconContainer() {
 			</figure>
 			<figure className="icon-container__logo">
 				<img
-					src={nodeIcon}
+					src={reactIcon}
 					alt="CSS Icon"
 					className="icon-container__icon"
 				/>
 			</figure>
+
 			<figure className="icon-container__logo">
 				<img
-					src={reactIcon}
+					src={nodeIcon}
 					alt="CSS Icon"
 					className="icon-container__icon"
 				/>
@@ -70,7 +57,21 @@ function IconContainer() {
 			</figure>
 			<figure className="icon-container__logo">
 				<img
+					src={figmaIcon}
+					alt="CSS Icon"
+					className="icon-container__icon"
+				/>
+			</figure>
+			<figure className="icon-container__logo">
+				<img
 					src={mongoIcon}
+					alt="CSS Icon"
+					className="icon-container__icon"
+				/>
+			</figure>
+			<figure className="icon-container__logo">
+				<img
+					src={gitIcon}
 					alt="CSS Icon"
 					className="icon-container__icon"
 				/>

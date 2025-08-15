@@ -3,9 +3,19 @@
 	gap: 3rem;
 	font-size: 2rem;
 	margin-bottom: 20rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .icon-container__icon {
 	width: 90px;
-	height: 90px;
+	height: auto;
+}
+
+.icon-container__logo {
+	padding: 1.7rem 2rem 1.2rem 2rem;
+	background-color: rgb(123, 60, 129);
+	border-radius: 25%;
+	box-shadow: 0px 0px 7px 6px rgb(128, 73, 139);
 }
