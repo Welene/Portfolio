@@ -41,7 +41,7 @@ function Main() {
 						title="Hej, va trevligt att se dig här!"
 						text={
 							<>
-								Jag är en svenskinnflyttad tjej från Norge sedan
+								Jag är en svenskinflyttad tjej från Norge sedan
 								några år tillbaka.
 								<Spacer height="1rem" />
 								Som en kreativ själ bestämde jag mig för att
@@ -51,7 +51,7 @@ function Main() {
 								Jag är en positiv & glad person som gillar att
 								sprida glädje.
 								<Spacer height="1rem" />
-								Kanske får jag chansen att skapa något och
+								Kanske får jag chansen att skapa något &
 								utvecklas vidare hos er, det skulle vara både en
 								ära & en glädje!
 							</>
@@ -107,9 +107,9 @@ function Main() {
 							<>
 								Nedan kan du se flera exempel på olika projekt
 								jag har arbetat med under utbildningen. Jag har
-								fått arbeta både självständigt och i team.
+								fått arbeta både självständigt & i team.
 								Teamarbete har vi lagt mycket fokus på, vilket
-								har gjort att jag utvecklats mycket och lärt mig
+								har gjort att jag utvecklats mycket & lärt mig
 								att bli ett ännu bättre på agilt arbete!
 							</>
 						}
