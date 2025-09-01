@@ -8,9 +8,12 @@ import Blob5 from '../assets/blobs/blob5.png';
 import Blob6 from '../assets/blobs/blob6.png';
 import Blob7 from '../assets/blobs/blob7.png';
 
+const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
+
 function Main() {
 	return (
 		<main className="mainContainer">
+			{/* group 1 */}
 			<section id="group-1" className="parallax_group">
 				<div className="parallax_layer base_layer">
 					<p>Base Layer Page</p>
@@ -34,11 +37,31 @@ function Main() {
 				</div>
 				<div className="parallax_layer mid_layer">
 					{/* <p>Mid Layer Page</p> */}
-					<Section />
+					<Section
+						title="Hej, va trevligt att se dig här!"
+						text={
+							<>
+								Jag är en svenskinnflyttad tjej från Norge sedan
+								några år tillbaka.
+								<Spacer height="1rem" />
+								Som en kreativ själ bestämde jag mig för att
+								börja på Frontendutbildningen hösten 2024, ett
+								val som var 100% rätt!
+								<Spacer height="1rem" />
+								Jag är en positiv & glad person som gillar att
+								sprida glädje.
+								<Spacer height="1rem" />
+								Kanske får jag chansen att skapa något och
+								utvecklas vidare hos er, det skulle vara både en
+								ära & en glädje!
+							</>
+						}
+					/>
 				</div>
 				<div className="parallax_layer top_layer"></div>
 			</section>
 
+			{/* group 2 */}
 			<section id="group-2" className="parallax_group">
 				<div className="parallax_layer mid_layer">
 					{/* <p>Another Mid Layer Page</p> */}
@@ -48,6 +71,8 @@ function Main() {
 					<p className="top-layer__text">Top Layer Page</p>
 				</div> */}
 			</section>
+
+			{/* group 3 */}
 			<section id="group-3" className="parallax_group">
 				<div className="parallax_layer base_layer">
 					<p className="base-layer">Base layer group 3</p>
@@ -76,7 +101,19 @@ function Main() {
 				</div>
 
 				<div className="parallax_layer mid_layer">
-					<Section />
+					<Section
+						title="Projekter"
+						text={
+							<>
+								Nedan kan du se flera exempel på olika projekt
+								jag har arbetat med under utbildningen. Jag har
+								fått arbeta både självständigt och i team.
+								Teamarbete har vi lagt mycket fokus på, vilket
+								har gjort att jag utvecklats mycket och lärt mig
+								att bli ett ännu bättre på agilt arbete!
+							</>
+						}
+					/>
 				</div>
 				{/* <div className="parallax_layer top_layer">
 					<p className="top-layer__text">Top Layer Page</p>

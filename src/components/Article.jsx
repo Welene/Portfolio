@@ -5,7 +5,7 @@ function Article({ text, title }) {
 	return (
 		<article className="article">
 			<h2 className="article_title">{title}</h2>
-			<p className="article_text">{text}</p>
+			<section className="article_text">{text}</section>
 		</article>
 	);
 }
