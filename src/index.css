@@ -30,14 +30,30 @@ body {
 	box-sizing: border-box;
 } */
 
+/* BROKEN ANIMATION ON H1 TITLE WITH MY NAME ------------------------------------------------------------------------ */
 .intro_screen__title {
 	font-size: 2.5rem;
 	box-shadow: 0px 0px 50px 0px rgb(71, 71, 71);
 	border-radius: 0.3rem;
 	padding: 1rem;
 	margin-top: 15rem;
-	/* margin-left: 65rem; */
+	color: rgb(240, 240, 240);
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	animation: typing-html 0.8s steps(10, end) forwards;
 }
+
+@keyframes typing-html {
+	from {
+		width: 0;
+	}
+	to {
+		width: 17;
+	}
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
 
 .parallax_wrapper {
 	height: 100vh;
@@ -63,6 +79,7 @@ main {
 	display: contents; /* pretend main is not here */
 }
 
+/* HEADER SECTION WITH PICTURE */
 .parallax_group.intro_screen {
 	height: 80vh;
 	background-color: rgb(24, 24, 24);
@@ -99,7 +116,6 @@ main {
 .parallax_group .parallax_layer {
 	position: absolute;
 	inset: 0;
-	/* right, top, left & bottom = 0 - vi vil at layeret skal stretche helt til toppen, høyre, venstre og bottom */
 	display: flex;
 	justify-content: center;
 	align-items: center;

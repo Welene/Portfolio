@@ -16,7 +16,7 @@ function Main() {
 			{/* group 1 */}
 			<section id="group-1" className="parallax_group">
 				<div className="parallax_layer base_layer">
-					<p>Base Layer Page</p>
+					{/* <p>Base Layer Page</p> */}
 					<section className="base_layer blob_section">
 						<img
 							className="blob_section__blob1"
@@ -75,7 +75,7 @@ function Main() {
 			{/* group 3 */}
 			<section id="group-3" className="parallax_group">
 				<div className="parallax_layer base_layer">
-					<p className="base-layer">Base layer group 3</p>
+					{/* <p className="base-layer">Base layer group 3</p> */}
 					<section className="base_layer blob_section-2">
 						<img
 							className="blob_section__blob4"
