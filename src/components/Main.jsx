@@ -13,7 +13,7 @@ const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
 function Main() {
 	return (
 		<main className="mainContainer">
-			{/* group 1 */}
+			{/* group 1 ----------------------------------------------------------------------------------------------------------------------------------------- */}
 			<section id="group-1" className="parallax_group">
 				<div className="parallax_layer base_layer">
 					{/* <p>Base Layer Page</p> */}
@@ -36,13 +36,13 @@ function Main() {
 					</section>
 				</div>
 				<div className="parallax_layer mid_layer">
-					{/* <p>Mid Layer Page</p> */}
+					<IconContainer />
 					<Section
 						title="Hej, va trevligt att se dig här!"
 						text={
 							<>
-								Jag är en svenskinflyttad tjej från Norge sedan
-								några år tillbaka.
+								Jag är svenskinflyttad från Norge sedan några år
+								tillbaka.
 								<Spacer height="1rem" />
 								Som en kreativ själ bestämde jag mig för att
 								börja på Frontendutbildningen hösten 2024, ett
@@ -61,18 +61,23 @@ function Main() {
 				<div className="parallax_layer top_layer"></div>
 			</section>
 
-			{/* group 2 */}
+			{/* group 2----------------------------------------------------------------------------------------------------------------------------------------- */}
 			<section id="group-2" className="parallax_group">
+				<div className="parallax_layer base_layer">
+					<section className="base_layer blob_section-2">
+						{/* You can add images or background here if you want later */}
+					</section>
+				</div>
 				<div className="parallax_layer mid_layer">
 					{/* <p>Another Mid Layer Page</p> */}
-					<IconContainer />
+					<p class="just-a-test">TEST TEST TEST</p>
 				</div>
 				{/* <div className="parallax_layer top_layer">
 					<p className="top-layer__text">Top Layer Page</p>
 				</div> */}
 			</section>
 
-			{/* group 3 */}
+			{/* group 3 -----------------------------------------------------------------------------------------------------------------------------------------  */}
 			<section id="group-3" className="parallax_group">
 				<div className="parallax_layer base_layer">
 					{/* <p className="base-layer">Base layer group 3</p> */}
@@ -118,6 +123,68 @@ function Main() {
 				{/* <div className="parallax_layer top_layer">
 					<p className="top-layer__text">Top Layer Page</p>
 				</div> */}
+			</section>
+
+			{/* BRAND NEW --------------- EXPERIMENTAL ------------------------------------------------   group 4 */}
+			<section id="group-4" className="parallax_group">
+				<div className="parallax_layer base_layer">
+					<section className="base_layer blob_section-2">
+						{/* new blobs or background images */}
+						<img
+							className="blob_section__blob5"
+							src={Blob5}
+							alt="Background picture of a blob"
+						/>
+					</section>
+				</div>
+
+				<div className="parallax_layer mid_layer">
+					<Section
+						title="ARTIKKEL GR. 4"
+						text={
+							<>
+								HER ER ARTIKKEL GRUPPE 4
+								BLABALBALALBALBALBALBALBALBALBLABLABALBALBLABALBALBALBALBALB✨
+								<Spacer height="1rem" />
+							</>
+						}
+					/>
+				</div>
+
+				<div className="parallax_layer top_layer">
+					{/* optional top layer content */}
+				</div>
+			</section>
+
+			{/* BRAND NEW --------------- EXPERIMENTAL ----------------------------------------------------- group 5 */}
+			<section id="group-5" className="parallax_group">
+				<div className="parallax_layer base_layer">
+					<section className="base_layer blob_section-2">
+						{/* new blobs or background images */}
+						{/* <img
+							className="blob_section__blob2"
+							src={Blob2}
+							alt="Background picture of a blob"
+						/> */}
+					</section>
+				</div>
+
+				<div className="parallax_layer mid_layer">
+					<Section
+						title="ARTIKKEL GR. 5"
+						text={
+							<>
+								HER ER ARTIKKEL GRUPPE 5
+								BLABALBALALBALBALBALBALBALBALBLABLABALBALBLABALBALBALBALBALB✨
+								<Spacer height="1rem" />
+							</>
+						}
+					/>
+				</div>
+
+				<div className="parallax_layer top_layer">
+					{/* optional top layer content */}
+				</div>
 			</section>
 		</main>
 	);

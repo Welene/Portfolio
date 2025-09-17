@@ -9,7 +9,7 @@ function App() {
 			<Main />
 
 			<footer id="outro" className="parallax_group outro_screen">
-				<p>Thank you for scrolling!</p>
+				<p>© 2025 Helene Theodorsen</p>
 			</footer>
 		</div>
 	);
