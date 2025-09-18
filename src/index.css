@@ -8,28 +8,6 @@ body {
 	background-color: rgb(8, 8, 8);
 }
 
-/* forelder til ul-listen og h1-tittelen */
-/* .app {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	min-height: 100vh;
-	width: 100vw;
-	background-color: rgb(14, 14, 14);
-} */
-/*
-.appWrapper {
-	max-width: 1100px;
-	min-height: 100vh;
-	flex: 1;
-	margin: 0 auto;
-	background-color: rgb(12, 12, 12);
-	padding: 0 20px;
-	box-sizing: border-box;
-} */
-
 /* BROKEN ANIMATION ON H1 TITLE WITH MY NAME ------------------------------------------------------------------------ */
 .intro_screen__title {
 	font-size: 2.5rem;
@@ -60,11 +38,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	perspective: 300px;
-	/* z-akse = fram og tilbake, 3D inn og ut, e kameraet nært eller langt unna, kor vi ser det fra */
-	/* max-width: 1100px; */
-	/* min-width: 1100px; */
 	min-height: 100vh;
-	/* flex: 1; */
 	margin: 0 auto;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
@@ -72,6 +46,32 @@ body {
 
 .parallax_wrapper::-webkit-scrollbar {
 	display: none;
+}
+
+/* STAR ANIMATION IF IT WORKS */
+
+.parallax_wrapper > .stars-container {
+	pointer-events: none;
+}
+.star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: rgb(247, 247, 247);
+	border-radius: 50%;
+	z-index: 5;
+	animation: twinkle infinite alternate;
+}
+
+@keyframes twinkle {
+	from {
+		opacity: 0.2;
+		transform: scale(1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1.5);
+	}
 }
 
 main {
@@ -91,10 +91,13 @@ main {
 	background-position: center;
 	background-repeat: no-repeat;
 	box-shadow: 1px 1px 10px 5px rgb(37, 37, 37);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
 }
 
 .parallax_group.outro_screen {
-	height: 40%;
+	height: 20rem;
 	background-color: rgb(114, 114, 114);
 	display: flex;
 	justify-content: center;
@@ -105,18 +108,18 @@ main {
 		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
 		sans-serif;
 	font-style: italic;
+	z-index: 6;
 }
 
-/* ALT ER OK SÅ LANGT*/
+.parallax_group.outro_screen {
+	height: 20rem;
+	margin-top: 12rem;
+}
 
 .parallax_group {
 	position: relative;
-	/* pos. er relativ til page, senere skal vi ha komponenter som har position absolute inni her - parallax-group wrapper disse komponentene*/
-	height: 70vh;
+	height: 100vh;
 	transform-style: preserve-3d;
-	/* width: 100%; */
-
-	/* når vi gir siden depth fra kamera-perspektivet vi har valgt, tar den avre å¨det 3D perspektivet fordi noen nettlesere gjør det flatt  */
 }
 
 .parallax_group .parallax_layer {
@@ -125,11 +128,13 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	max-width: 1100px;
+	min-width: 1100px;
+	margin: 0 auto;
 }
 
 .base_layer {
 	transform: translateZ(-200px) scale(2);
-	/* width: 100vw; */
 	left: 0;
 	right: 0;
 }
@@ -151,17 +156,21 @@ main {
 	color: rgb(241, 241, 241);
 }
 
-/* .top-layer__blob {
-	width: 400px;
-	height: 400px;
-} */
-
 /* BLOB SECTION GROUP 1 -- BASE LAYER  */
 
-.blob_section {
+.blob_section,
+.blob_section-2,
+.blob_section-3,
+.blob_section-4,
+.blob_section-5 {
 	display: flex;
 	width: 50%;
 	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 100vw;
 }
 
 .blob_section img:nth-child(1) {
@@ -182,46 +191,69 @@ main {
 	transform: scale(1);
 }
 
-.base_layer .blob_section img {
-	/* transform: scale(0.8); */
-	max-width: 200px;
-}
-
 /* BLOB SECTION GROUP 3 -- BASE LAYER  */
 
-.blob_section-2 {
+/* .blob_section-2 {
 	display: flex;
 	width: 50%;
 	height: 50%;
-}
+} */
 
-.blob_section-2 img:nth-child(1) {
+.blob_section-3 img:nth-child(1) {
 	align-self: flex-end;
 	order: 1;
 	transform: scale(1.2);
 }
 
-.blob_section-2 img:nth-child(2) {
+.blob_section-3 img:nth-child(2) {
 	align-self: flex-start;
 	order: 2;
 	transform: scale(1.2);
 }
-.blob_section-2 img:nth-child(3) {
+.blob_section-3 img:nth-child(3) {
 	align-self: flex-end;
 	order: 3;
 	transform: scale(1.2);
 }
 
-.blob_section-2 img:nth-child(4) {
+.blob_section-3 img:nth-child(4) {
 	align-self: flex-start;
-	transform: scale(1.6);
+	transform: scale(1.2);
 	order: 4;
 	margin-left: auto;
 }
 
-.base_layer .blob_section-2 img {
-	/* transform: scale(0.8); */
-	max-width: 200px;
+/* BLOB SECTION GROUP 4 -- BASE LAYER  */
+.blob_section-4 img:nth-child(2) {
+	align-self: flex-start;
+	order: 1;
+	transform: scale(1.2);
+}
+.blob_section-4 img:nth-child(3) {
+	align-self: flex-end;
+	order: 2;
+	transform: scale(1.2);
+}
+/* BLOB SECTION GROUP 5 -- BASE LAYER  */
+.blob_section-5 img:nth-child(2) {
+	align-self: flex-start;
+	order: 1;
+	transform: scale(1.2);
+}
+.blob_section-5 img:nth-child(3) {
+	align-self: flex-end;
+	order: 2;
+	transform: scale(1.2);
+}
+
+/* ALL BLOBS ALL GROUPS SIZE */
+.base_layer .blob_section,
+.base_layer .blob_section-2,
+.base_layer .blob_section-3,
+.base_layer .blob_section-4,
+.base_layer .blob_section-5 {
+	transform: scale(0.5);
+	min-width: 100vw;
 }
 
 /* BLOB MOVEMENT */
@@ -239,7 +271,10 @@ main {
 }
 
 .blob_section img,
-.blob_section-2 img {
+.blob_section-2 img,
+.blob_section-3 img,
+.blob_section-4 img,
+.blob_section-5 img {
 	animation-name: floatAndBreathe;
 	animation-duration: 15s;
 	animation-timing-function: ease-in-out;
@@ -266,12 +301,15 @@ main {
 .blob_section__blob6 {
 	animation-delay: 9s;
 }
+.blob_section__blob7 {
+	animation-delay: 13s;
+}
 
 /* BLOB SECTION -- DONE  */
 
 /* HEADER SECTION */
 #intro {
-	z-index: 0;
+	z-index: 6;
 }
 
 /* RØD */
@@ -283,8 +321,8 @@ main {
 }
 
 #group-1 > .parallax_layer.mid_layer {
-	overflow: visible; /* allow children to scale out */
-	padding-bottom: 20rem; /* give space for hover growth */
+	overflow: visible;
+	padding-bottom: 20rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -314,16 +352,16 @@ main {
 
 /* ---------------------------------------------------------RØD */
 #group-1 > .base_layer {
-	background-color: rgb(116, 59, 59);
 	transform: translateZ(-300px) scale(2);
-	background-color: rgb(15, 15, 15);
+	background-color: rgb(8, 8, 8);
+	border: 2px solid rgb(107, 0, 0);
 }
 
 /* ----------------------------------------------------------BLÅ */
 #group-2 > .base_layer {
 	transform: translateZ(-300px) scale(2);
-	background-color: rgb(74, 155, 221);
-	background-color: rgb(15, 15, 15);
+	background-color: rgb(8, 8, 8);
+	border: 2px solid rgb(14, 8, 102);
 }
 
 #group-2 > .mid_layer {
@@ -331,17 +369,14 @@ main {
 	margin-top: 14rem;
 	padding-top: 2rem;
 	height: 50%;
+	background: linear-gradient(to right, #b41336, #6439b3);
 }
 
-.just-a-test {
+.TEST-TXT-GROUP-2 {
 	color: white;
 	font-size: 3rem;
 	margin-bottom: 18rem;
 }
-
-/* #group-2 .mid_layer .infoContainer {
-	margin-top: -25rem;
-} */
 
 #group-3 .mid_layer .infoContainer {
 	margin-bottom: 80rem;
@@ -349,15 +384,15 @@ main {
 
 /* -----------------------------------------------------------GRØNN */
 #group-3 > .base_layer {
-	background-color: rgb(42, 134, 70);
-	background-color: rgb(15, 15, 15);
+	background-color: rgb(8, 8, 8);
+	border: 2px solid rgb(5, 41, 8);
 	transform: translateZ(-300px) scale(2);
 }
 
 /*------------------------------------------------------------ GUL */
 #group-4 > .base_layer {
-	background-color: rgb(204, 202, 82);
-	background-color: rgb(15, 15, 15);
+	background-color: rgb(8, 8, 8);
+	border: 2px solid rgb(47, 48, 5);
 	transform: translateZ(-300px) scale(2);
 }
 
@@ -365,13 +400,11 @@ main {
 	margin-bottom: 70rem;
 }
 
+/* ----------------------------------------------------------- ORANSJE  */
+
 #group-5 .mid_layer .infoContainer {
 	margin-bottom: 10rem;
 }
-
-/* .mainContainer {
-	width: 100%;
-} */
 
 #group-5 {
 	position: relative;
@@ -380,8 +413,8 @@ main {
 }
 
 #group-5 > .base_layer {
-	background-color: rgb(214, 127, 13);
-	background-color: rgb(15, 15, 15);
+	background-color: rgb(8, 8, 8);
+	border: 2px solid rgb(61, 28, 5);
 	transform: translateZ(-300px) scale(2);
 }
 

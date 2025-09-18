@@ -1,25 +1,23 @@
-/* --> FIKS SÅNN AT TEKSTEN SOM DUKKER OPP UNDER BILDENE IKKE GLITCHER  */
-
 .icon-container {
 	display: flex;
-	flex-wrap: wrap;
-	font-size: 2rem;
-	margin-bottom: 118rem;
+	margin-bottom: 116rem;
 	position: absolute;
 	align-items: center;
 	justify-content: center;
+	justify-content: space-between;
 	overflow: visible;
+	gap: 0.2rem;
 }
 
 .icon-container__logo {
 	transition: transform 0.5s ease;
 	cursor: pointer;
-	margin-left: 1rem;
-
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0rem 1rem 0rem 1rem;
+	height: 8rem; /*større for å se tekst under*/
 }
 
 .icon-container__logo:hover {
@@ -27,22 +25,19 @@
 }
 
 .icon-container__icon {
-	width: 80px;
+	width: 55px;
 	height: auto;
-}
-
-.icon-container__logo {
-	padding: 1.7rem 2rem 1.2rem 2rem;
-	border-radius: 25%;
 }
 
 .icon-container__text {
 	display: none;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-family: monospace;
 	white-space: nowrap;
 	overflow: hidden;
 	margin-top: 0.8rem;
+	position: absolute;
+	top: 35%;
 }
 
 .icon-container__logo:hover .icon-container__text {
@@ -60,7 +55,6 @@
 	}
 }
 
-/* Individual character/letters length to each __text for smoother animation */
 .icon-container__logo:hover .icon-container__text--html {
 	display: inline-block;
 	color: rgb(240, 240, 240);
@@ -93,7 +87,7 @@
 
 .icon-container__logo:hover .icon-container__text--css {
 	display: inline-block;
-	animation: typing-css 0.5s steps(3, end),
+	animation: typing-css 0.3s steps(3, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-css {
@@ -107,7 +101,7 @@
 
 .icon-container__logo:hover .icon-container__text--html {
 	display: inline-block;
-	animation: typing-html 0.6s steps(4, end),
+	animation: typing-html 0.5s steps(4, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-html {
@@ -219,7 +213,7 @@
 
 .icon-container__logo:hover .icon-container__text--aws {
 	display: inline-block;
-	animation: typing-aws 0.5s steps(3, end),
+	animation: typing-aws 0.3s steps(3, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-aws {
@@ -242,5 +236,21 @@
 	}
 	to {
 		width: 6ch;
+	}
+}
+
+.icon-container__logo:hover .icon-container__text--agile {
+	display: inline-block;
+	color: rgb(240, 240, 240);
+	animation: typing-git 0.6s steps(6, end),
+		blink 0.6s step-end infinite alternate;
+}
+
+@keyframes typing-agile {
+	from {
+		width: 0ch;
+	}
+	to {
+		width: 5ch;
 	}
 }

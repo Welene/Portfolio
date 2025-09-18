@@ -10,6 +10,7 @@ import reactIcon from '../assets/icons/react.png';
 import vscIcon from '../assets/icons/vscode.png';
 import awsIcon from '../assets/icons/aws.png';
 import dynaIcon from '../assets/icons/dynamodb.png';
+import agileIcon from '../assets/icons/agile.png';
 
 function IconContainer() {
 	return (
@@ -132,6 +133,16 @@ function IconContainer() {
 				/>
 				<p className="icon-container__text icon-container__text--git">
 					Github
+				</p>
+			</figure>
+			<figure className="icon-container__logo">
+				<img
+					src={agileIcon}
+					alt="Agile teamwork icon"
+					className="icon-container__icon"
+				/>
+				<p className="icon-container__text icon-container__text--agile">
+					Agilt
 				</p>
 			</figure>
 		</section>
