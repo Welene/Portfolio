@@ -8,7 +8,9 @@ function App() {
 			<div className="parallax_wrapper">
 				<Stars count={700} />
 				<header id="intro" className="parallax_group intro_screen">
-					<h1 className="intro_screen__title">Helene Theodorsen</h1>
+					<h1 className="intro_screen__title">
+						Helene Theodorsens portfolio
+					</h1>
 				</header>
 				<Main />
 			</div>

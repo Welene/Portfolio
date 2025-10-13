@@ -2,17 +2,8 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './EmblaCarousel.css';
 
-export function EmblaCarousel() {
+export function EmblaCarousel({ photos = [] }) {
 	const [emblaRef] = useEmblaCarousel();
-
-	const photos = [
-		'/src/assets/photos/1.jpg',
-		'/src/assets/photos/2.jpg',
-		'/src/assets/photos/3.jpg',
-		'/src/assets/photos/11.jpg',
-		'/src/assets/photos/6.jpg',
-		'/src/assets/photos/7.jpg',
-	];
 
 	return (
 		<div className="embla" ref={emblaRef}>

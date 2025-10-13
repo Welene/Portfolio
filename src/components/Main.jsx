@@ -1,41 +1,51 @@
 import Section from '../components/Section';
 import IconContainer from './IconContainer';
-// import Blob1 from '../assets/blobs/blob1.png';
-// import Blob2 from '../assets/blobs/blob2.png';
-// import Blob3 from '../assets/blobs/blob3.png';
-// import Blob4 from '../assets/blobs/blob4.png';
-// import Blob5 from '../assets/blobs/blob5.png';
-// import Blob6 from '../assets/blobs/blob6.png';
-// import Blob7 from '../assets/blobs/blob7.png';
+import Email from '../assets/contact/email.png';
+import Instagram from '../assets/contact/instagram.png';
+import Linkedin from '../assets/contact/linkedin.png';
+import Phone from '../assets/contact/smartphone.png';
+
+import gitIcon from '../assets/icons/github.png';
+import Photo from '../assets/icons/photo.png';
+import Draw from '../assets/icons/draw.png';
+
 import { EmblaCarousel } from './EmblaCarousel';
+import Article from './Article';
 
 const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
+
+const cameraPhotos = [
+	'/src/assets/photos/1.jpg',
+	'/src/assets/photos/2.jpg',
+	'/src/assets/photos/3.jpg',
+	'/src/assets/photos/11.jpg',
+	'/src/assets/photos/6.jpg',
+	'/src/assets/photos/7.jpg',
+];
+
+const projectPhotosPhone = [
+	'/src/assets/projects/1.png',
+	'/src/assets/projects/2.png',
+	'/src/assets/projects/3.png',
+	'/src/assets/projects/4.png',
+	'/src/assets/projects/5.png',
+	'/src/assets/projects/6.png',
+	'/src/assets/projects/1a.png',
+];
+
+const projectPhotosDesktop = [
+	'/src/assets/projects/a.png',
+	'/src/assets/projects/b.png',
+	'/src/assets/projects/c.png',
+	'/src/assets/projects/d.png',
+];
 
 function Main() {
 	return (
 		<main className="mainContainer">
 			{/* group 1 ----------------------------------------------------------------------------------------------------------------------------------------- */}
 			<section id="group-1" className="parallax_group">
-				<div className="parallax_layer base_layer">
-					{/* <p>Base Layer Page</p> */}
-					{/* <section className="base_layer blob_section">
-						<img
-							className="blob_section__blob1"
-							src={Blob1}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob2"
-							src={Blob2}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob3"
-							src={Blob3}
-							alt="Background picture of a blob"
-						/>
-					</section> */}
-				</div>
+				<div className="parallax_layer base_layer"></div>
 				<div className="parallax_layer mid_layer">
 					<IconContainer />
 					<Section
@@ -59,59 +69,7 @@ function Main() {
 						}
 					/>
 				</div>
-				<div className="parallax_layer top_layer"></div>
-			</section>
-
-			{/* group 2----------------------------------------------------------------------------------------------------------------------------------------- */}
-			<section id="group-2" className="parallax_group">
-				<div className="parallax_layer base_layer">
-					{/* <section className="base_layer blob_section-2">
-						<img
-							className="blob_section__blob5"
-							src={Blob5}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob7"
-							src={Blob7}
-							alt="Background picture of a blob"
-						/>
-					</section> */}
-				</div>
-
-				<div className="parallax_layer mid_layer">
-					{/* <p>Another Mid Layer Page</p> */}
-					<EmblaCarousel />
-				</div>
-				{/* <div className="parallax_layer top_layer">
-					<p className="top-layer__text">Top Layer Page</p>
-				</div> */}
-			</section>
-
-			{/* group 3 -----------------------------------------------------------------------------------------------------------------------------------------  */}
-			<section id="group-3" className="parallax_group">
-				<div className="parallax_layer base_layer">
-					{/* <p className="base-layer">Base layer group 3</p> */}
-					{/* <section className="base_layer blob_section-3">
-						<img
-							className="blob_section__blob4"
-							src={Blob4}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob5"
-							src={Blob5}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob6"
-							src={Blob6}
-							alt="Background picture of a blob"
-						/>
-					</section> */}
-				</div>
-
-				<div className="parallax_layer mid_layer">
+				<div className="parallax_layer top_layer">
 					<Section
 						title="Projekter"
 						text={
@@ -126,36 +84,121 @@ function Main() {
 						}
 					/>
 				</div>
-				<div className="parallax_layer top_layer">
-					<EmblaCarousel />
+			</section>
+
+			{/* group 2----------------------------------------------------------------------------------------------------------------------------------------- */}
+			<section id="group-2" className="parallax_group">
+				<div className="parallax_layer base_layer"></div>
+
+				<div className="parallax_layer mid_layer">
+					{/* <p>Another Mid Layer Page</p> */}
+					<EmblaCarousel photos={projectPhotosDesktop} />
 				</div>
 			</section>
 
-			{/* BRAND NEW --------------- EXPERIMENTAL ------------------------------------------------   group 4 */}
-			<section id="group-4" className="parallax_group">
+			{/* group 3 -----------------------------------------------------------------------------------------------------------------------------------------  */}
+			<section id="group-3" className="parallax_group">
+				<div className="parallax_layer base_layer"></div>
+
+				<div className="parallax_layer mid_layer">
+					<section className="contact-section">
+						<article className="contact-section__content">
+							<h3 className="contact-section__heading">
+								Kontakt
+							</h3>
+							<p className="contact-section__txt">
+								Hör gärna av dig till mig!
+							</p>
+						</article>
+
+						<figure className="icon-container__contact">
+							<img
+								className="icon-container__icon--contact"
+								src={Email}
+								alt="Email icon"
+							/>
+							<img
+								className="icon-container__icon--contact"
+								src={Instagram}
+								alt="Instagram icon"
+							/>
+							<img
+								className="icon-container__icon--contact"
+								src={Linkedin}
+								alt="LinkedIn icon"
+							/>
+							<img
+								className="icon-container__icon--contact"
+								src={Phone}
+								alt="Phone icon"
+							/>
+						</figure>
+					</section>
+					{/* SECTION NUMMER TO ETTER CONTACT----------------------------------------- */}
+					<section className="other-section">
+						<article className="other-section__content">
+							<h3 className="other-section__heading">Annat</h3>
+							<p className="other-section__txt">
+								Kolla mina andra projekt:
+							</p>
+						</article>
+
+						<figure className="icon-container__other">
+							<div className="icon-item">
+								<a
+									href="https://github.com/welene"
+									target="_blank">
+									<img
+										className="icon-container__icon--other"
+										src={gitIcon}
+										alt="Github icon"
+									/>
+								</a>
+								<p className="icon-container__icon--info">
+									Besök mig på Github!
+								</p>
+							</div>
+
+							<div className="icon-item">
+								<a
+									href="https://picflow.com/a/gallery/gal_hHvASBovPKvnOhH9/designer"
+									target="_blank">
+									<img
+										className="icon-container__icon--other"
+										src={Draw}
+										alt="Pencil icon"
+									/>
+								</a>
+								<p className="icon-container__icon--info">
+									Kolla min artwork portfolio!
+								</p>
+							</div>
+
+							<div className="icon-item">
+								<a
+									href="https://picflow.com/a/gallery/ZVwlOjZ378xNh82f/designer"
+									target="_blank">
+									<img
+										className="icon-container__icon--other"
+										src={Photo}
+										alt="Photography icon"
+									/>
+								</a>
+								<p className="icon-container__icon--info">
+									Eller mitt foto-portfolio!
+								</p>
+							</div>
+						</figure>
+					</section>
+				</div>
+				<div className="parallax_layer top_layer">
+					<EmblaCarousel photos={projectPhotosPhone} />
+				</div>
+			</section>
+
+			{/* <section id="group-4" className="parallax_group">
 				<div className="parallax_layer base_layer">
-					{/* <section className="base_layer blob_section-4"> */}
-					{/* <img
-							className="blob_section__blob5"
-							src={Blob5}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob1"
-							src={Blob1}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob7"
-							src={Blob7}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob3"
-							src={Blob3}
-							alt="Background picture of a blob"
-						/>
-					</section> */}
+	
 				</div>
 
 				<div className="parallax_layer mid_layer">
@@ -172,35 +215,14 @@ function Main() {
 				</div>
 
 				<div className="parallax_layer top_layer">
-					{/* optional top layer content */}
+
 				</div>
 			</section>
 
-			{/* BRAND NEW --------------- EXPERIMENTAL ----------------------------------------------------- group 5 */}
+
 			<section id="group-5" className="parallax_group">
 				<div className="parallax_layer base_layer">
-					{/* <section className="base_layer blob_section-5">
-						<img
-							className="blob_section__blob6"
-							src={Blob6}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob4"
-							src={Blob4}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob1"
-							src={Blob1}
-							alt="Background picture of a blob"
-						/>
-						<img
-							className="blob_section__blob2"
-							src={Blob2}
-							alt="Background picture of a blob"
-						/>
-					</section> */}
+
 				</div>
 
 				<div className="parallax_layer mid_layer">
@@ -217,9 +239,8 @@ function Main() {
 				</div>
 
 				<div className="parallax_layer top_layer">
-					{/* optional top layer content */}
 				</div>
-			</section>
+			</section> */}
 		</main>
 	);
 }
