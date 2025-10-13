@@ -1,12 +1,12 @@
 import Section from '../components/Section';
 import IconContainer from './IconContainer';
-import Blob1 from '../assets/blobs/blob1.png';
-import Blob2 from '../assets/blobs/blob2.png';
-import Blob3 from '../assets/blobs/blob3.png';
-import Blob4 from '../assets/blobs/blob4.png';
-import Blob5 from '../assets/blobs/blob5.png';
-import Blob6 from '../assets/blobs/blob6.png';
-import Blob7 from '../assets/blobs/blob7.png';
+// import Blob1 from '../assets/blobs/blob1.png';
+// import Blob2 from '../assets/blobs/blob2.png';
+// import Blob3 from '../assets/blobs/blob3.png';
+// import Blob4 from '../assets/blobs/blob4.png';
+// import Blob5 from '../assets/blobs/blob5.png';
+// import Blob6 from '../assets/blobs/blob6.png';
+// import Blob7 from '../assets/blobs/blob7.png';
 import { EmblaCarousel } from './EmblaCarousel';
 
 const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
@@ -126,9 +126,9 @@ function Main() {
 						}
 					/>
 				</div>
-				{/* <div className="parallax_layer top_layer">
-					<p className="top-layer__text">Top Layer Page</p>
-				</div> */}
+				<div className="parallax_layer top_layer">
+					<EmblaCarousel />
+				</div>
 			</section>
 
 			{/* BRAND NEW --------------- EXPERIMENTAL ------------------------------------------------   group 4 */}

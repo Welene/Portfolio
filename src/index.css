@@ -14,20 +14,20 @@ body {
 	box-shadow: 0px 0px 50px 0px rgb(71, 71, 71);
 	border-radius: 0.3rem;
 	padding: 1rem;
-	margin-top: 15rem;
+	margin-top: 22rem;
 	color: rgb(240, 240, 240);
 	overflow: hidden;
 	display: inline-block;
 	white-space: nowrap;
-	animation: typing-html 0.8s steps(10, end) forwards;
+	animation: typing-header 0.8s steps(17, end) forwards;
 }
 
-@keyframes typing-html {
+@keyframes typing-header {
 	from {
 		width: 0;
 	}
 	to {
-		width: 17;
+		width: 17ch;
 	}
 }
 
@@ -81,6 +81,8 @@ main {
 
 /* HEADER SECTION WITH PICTURE */
 .parallax_group.intro_screen {
+	position: relative;
+	z-index: auto;
 	height: 80vh;
 	background-color: rgb(24, 24, 24);
 	display: flex;
@@ -98,7 +100,7 @@ main {
 
 .parallax_group.outro_screen {
 	height: 20rem;
-	background-color: rgb(114, 114, 114);
+	background-color: rgb(114, 114, 114, 0.6);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,6 +116,7 @@ main {
 .parallax_group.outro_screen {
 	height: 20rem;
 	margin-top: 12rem;
+	box-shadow: -1px -3px 8px 2px rgb(53, 53, 53);
 }
 
 .parallax_group {
@@ -315,7 +318,9 @@ main {
 /* RØD */
 #group-1 {
 	z-index: -1;
-	height: 250vh;
+	height: 200vh;
+	margin-top: 15rem;
+	margin-bottom: -10rem;
 	display: flex;
 	gap: 2;
 }
@@ -340,6 +345,7 @@ main {
 	z-index: 2;
 }
 
+/* GUL */
 #group-4 {
 	height: 140vh;
 	z-index: 3;
@@ -354,22 +360,25 @@ main {
 #group-1 > .base_layer {
 	transform: translateZ(-300px) scale(2);
 	background-color: rgb(8, 8, 8);
-	border: 2px solid rgb(107, 0, 0);
+	background-color: rgb(173, 28, 28);
+	border: 2px solid rgb(92, 18, 18);
 }
 
 /* ----------------------------------------------------------BLÅ */
 #group-2 > .base_layer {
 	transform: translateZ(-300px) scale(2);
 	background-color: rgb(8, 8, 8);
+	background-color: rgb(21, 21, 150);
 	border: 2px solid rgb(14, 8, 102);
 }
 
 #group-2 > .mid_layer {
 	background-color: rgb(5, 5, 5);
-	margin-top: 14rem;
-	padding-top: 2rem;
+	margin-top: 0rem;
+	padding-bottom: 15rem;
 	height: 50%;
 	background: linear-gradient(to right, #b41336, #6439b3);
+	transform: translateZ(-200px) scale(1.667);
 }
 
 .TEST-TXT-GROUP-2 {
@@ -385,6 +394,7 @@ main {
 /* -----------------------------------------------------------GRØNN */
 #group-3 > .base_layer {
 	background-color: rgb(8, 8, 8);
+	background-color: green;
 	border: 2px solid rgb(5, 41, 8);
 	transform: translateZ(-300px) scale(2);
 }
@@ -392,12 +402,19 @@ main {
 /*------------------------------------------------------------ GUL */
 #group-4 > .base_layer {
 	background-color: rgb(8, 8, 8);
+	background-color: yellow;
 	border: 2px solid rgb(47, 48, 5);
 	transform: translateZ(-300px) scale(2);
 }
 
 #group-4 .mid_layer .infoContainer {
 	margin-bottom: 70rem;
+}
+
+#group-4 > .top_layer {
+	background-color: rgb(8, 8, 8);
+	border: 2px solid rgb(47, 48, 5);
+	transform: translateZ(-300px) scale(2);
 }
 
 /* ----------------------------------------------------------- ORANSJE  */
@@ -437,4 +454,50 @@ h1 {
 
 h2 {
 	color: rgb(241, 241, 241);
+}
+
+.parallax_group {
+	position: relative;
+	height: 100vh;
+	transform-style: preserve-3d;
+}
+
+/* #group-1 > .base_layer {
+	height: 80vh;
+} */
+
+.base_layer {
+	transform: translateZ(-200px) scale(1.6);
+	z-index: 1;
+}
+
+.mid_layer {
+	transform: translateZ(0);
+	z-index: 2;
+}
+
+.top_layer {
+	transform: translateZ(50px) scale(0.8);
+	z-index: 3;
+}
+
+#group-1 > .base_layer {
+	transform: translateZ(-150px) scale(1.5);
+}
+
+.article_title {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+	animation: typing-article 0.8s steps(30, end) forwards;
+}
+
+@keyframes typing-article {
+	from {
+		width: 0;
+	}
+	to {
+		width: 30ch;
+	}
 }
