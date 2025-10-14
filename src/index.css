@@ -5,22 +5,23 @@
 }
 
 body {
-	background-color: rgb(10, 10, 10);
+	background-color: rgb(26, 26, 26);
 }
 
 /* BROKEN ANIMATION ON H1 TITLE WITH MY NAME ------------------------------------------------------------------------ */
 .intro_screen__title {
 	font-size: 2.5rem;
-	box-shadow: 0px 0px 20px 0px rgb(71, 71, 71);
-	background: linear-gradient(to right, #c76617ad, #6439b3a6);
+	/* box-shadow: 0px 0px 20px 0px rgb(71, 71, 71); */
+	/* background: linear-gradient(to right, #c76617ad, #6439b3a6); */
 	border-radius: 0.3rem;
 	padding: 1rem;
-	margin-top: 22rem;
+	margin-top: 30rem;
 	color: rgb(240, 240, 240);
 	overflow: hidden;
 	display: inline-block;
 	white-space: nowrap;
 	animation: typing-header 1.4s steps(26, end) forwards;
+	filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.514));
 }
 
 @keyframes typing-header {
@@ -32,13 +33,16 @@ body {
 	}
 }
 
+.intro-section__icons {
+	display: flex;
+	justify-content: center;
+}
 /* --------------------------------------------------------------------------------------------------------------- */
 
 .parallax_wrapper {
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	perspective: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	min-height: 100vh;
 	margin: 0 auto;
 	scrollbar-width: none;
@@ -49,19 +53,19 @@ body {
 	display: none;
 }
 
-/* STAR ANIMATION IF IT WORKS */
-
 .parallax_wrapper > .stars-container {
 	pointer-events: none;
+	z-index: -1;
 }
 .star {
-	position: absolute;
+	position: fixed;
+	pointer-events: none;
 	width: 2px;
 	height: 2px;
 	background: rgb(247, 247, 247);
 	border-radius: 50%;
-	z-index: 5;
 	animation: twinkle infinite alternate;
+	z-index: -1;
 }
 
 @keyframes twinkle {
@@ -83,8 +87,7 @@ main {
 /* HEADER SECTION WITH PICTURE */
 .parallax_group.intro_screen {
 	position: relative;
-	z-index: auto;
-	height: 80vh;
+	height: 45rem;
 	background-color: rgb(24, 24, 24);
 	display: flex;
 	justify-content: center;
@@ -93,7 +96,8 @@ main {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	box-shadow: 1px 1px 10px 5px rgb(37, 37, 37);
+	box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.445);
+
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
 		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
 		sans-serif;
@@ -101,7 +105,7 @@ main {
 
 .parallax_group.outro_screen {
 	height: 20rem;
-	background-color: rgb(114, 114, 114, 0.6);
+	/* background-color: rgb(114, 114, 114, 0.6); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -111,126 +115,73 @@ main {
 		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
 		sans-serif;
 	font-style: italic;
-	z-index: 6;
-}
-
-.parallax_group.outro_screen {
 	margin-top: 12rem;
-	box-shadow: -1px -3px 8px 2px rgb(53, 53, 53);
+	/* box-shadow: 8px -16px 16px hsla(0, 0%, 0%, 0.322); */
+	background-image: url('./assets/photos/mount2.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .parallax_group {
-	position: relative;
+	display: flex;
+	justify-content: center;
+	/* position: relative; */
 	height: 100vh;
-	transform-style: preserve-3d;
 }
 
 .parallax_group .parallax_layer {
 	position: absolute;
-	inset: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	max-width: 1100px;
+
 	min-width: 1100px;
 	margin: 0 auto;
 }
 
-.base_layer {
-	transform: translateZ(-200px) scale(2);
-	left: 0;
-	right: 0;
+.embla {
+	max-width: 1100px;
 }
 
-.mid_layer {
-	transform: translateZ(
-		0
-	); /* flyttes ikke noen steder, scroller like  fort som vi scroller*/
-}
-
-.top_layer {
-	transform: translateZ(200px) scale(0.3);
-	z-index: 999;
-	/* funke ikke */
-}
-
-/* HEADER SECTION */
-#intro {
-	z-index: 6;
-}
-
-/* RØD */
 #group-1 {
-	z-index: -1;
-	height: 200vh;
-	margin-top: 15rem;
-	/* margin-bottom: 0rem; */
-	/* --------------------- DENNE STYRER HVOR LANGT OPPE/NEDE "Projekter" BOKSEN LIGGER I GROUP-1 */
-	display: flex;
 	gap: 2;
 }
 
-#group-1 > .parallax_layer.mid_layer {
-	overflow: visible;
-	padding-bottom: 22rem;
+#group-1 > .top_layer {
+	/* margin-top: 90rem; */
+	margin-top: 18rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	gap: 2rem;
 }
 
-/* BLÅ */
-#group-2 {
-	height: 180vh;
-	z-index: 1;
-}
-
-/* GRØNN */
-#group-3 {
-	height: 160vh;
-	z-index: 2;
-}
-
-/* GUL */
-#group-4 {
-	height: 140vh;
-	z-index: 3;
-}
-
-#group-5 {
-	height: 120vh;
-	z-index: 4;
-}
-
-/* ---------------------------------------------------------RØD */
-#group-1 > .base_layer {
-	transform: translateZ(-100px) scale(1.33);
-	background-color: rgb(10, 10, 10);
-	/* background-color: rgba(173, 28, 28, 0.158); */
-	border: 2px solid rgb(92, 18, 18);
-}
-
-#group-1 > .top_layer {
-	transform: translateZ(-100px) scale(1.33);
-	margin-top: 90rem;
-}
-
-/* ----------------------------------------------------------BLÅ */
-#group-2 > .base_layer {
-	transform: translateZ(-300px) scale(2);
-	background-color: rgb(10, 10, 10);
-	/* background-color: rgba(21, 21, 150, 0.151); */
-	border: 2px solid rgb(14, 8, 102);
-}
-
-#group-2 > .mid_layer {
+#group-2 > .mid_layer--over {
 	background-color: rgb(5, 5, 5);
-	margin-top: -20rem;
+	box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.445);
+	display: flex;
+	margin-top: 20rem;
+	justify-content: center;
+	align-items: center;
 	padding: 1.6rem;
 	padding-bottom: 1rem;
-	height: 30%;
-
+	height: 25rem;
+	width: 100%;
 	background: linear-gradient(to right, #c76617ad, #6439b3a6);
-	transform: translateZ(-80px) scale(1.267);
+	background: linear-gradient(to right, #945725, #4b2e80);
+}
+
+#group-2 > .mid_layer--under {
+	background-color: rgb(5, 5, 5);
+	box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.445);
+	margin-top: 50rem;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	padding: 1.6rem;
+	padding-bottom: 1rem;
+	height: 25rem;
+	width: 100%;
+	background: linear-gradient(to right, #c76617ad, #6439b3a6);
+	background: linear-gradient(to right, #945725, #4b2e80);
 }
 
 #group-2 .embla__slide {
@@ -238,8 +189,16 @@ main {
 	height: auto;
 }
 
-#group-3 .mid_layer .infoContainer {
-	margin-bottom: 80rem;
+#group-2 .embla__slide-img {
+	border-radius: 0.5rem;
+}
+
+#group-3 {
+	margin-top: 30rem;
+}
+
+#group-3 img {
+	filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.384));
 }
 
 #group-3 .mid_layer {
@@ -248,33 +207,13 @@ main {
 	gap: 12rem;
 }
 
-#group-3 .top_layer {
-	margin-bottom: 100rem;
-	transform: translateZ(-100px) scale(1.33);
-
-	margin-top: -20rem;
-	padding: 1.5rem;
-	padding-bottom: 1rem;
-	height: 55%;
-	background: linear-gradient(to right, #c76617ad, #6439b3a6);
-	transform: translateZ(-80px) scale(1.267);
-}
-
-/* -----------------------------------------------------------GRØNN */
-#group-3 > .base_layer {
-	background-color: rgb(10, 10, 10);
-	/* background-color: rgba(0, 128, 0, 0.199); */
-	border: 2px solid rgb(5, 41, 8);
-	transform: translateZ(-300px) scale(2);
-}
-
 #group-3 .embla__slide {
 	width: 500px;
 	min-height: 700px;
 }
 
 .contact-section {
-	box-shadow: 0px 0px 8px 2px rgb(56, 56, 56);
+	box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.445);
 	background-color: rgba(169, 115, 182, 0.6);
 	border-radius: 0.3rem;
 	display: flex;
@@ -286,6 +225,7 @@ main {
 	min-height: 18rem;
 	gap: 4rem;
 	background: linear-gradient(to right, #c76617ad, #6439b3a6);
+	background: linear-gradient(to right, #945725, #4b2e80);
 }
 
 .contact-section__heading {
@@ -324,7 +264,7 @@ main {
 }
 
 .other-section {
-	box-shadow: 0px 0px 8px 2px rgb(56, 56, 56);
+	box-shadow: 8px 16px 16px hsla(0, 0%, 0%, 0.445);
 	background-color: rgba(169, 115, 182, 0.6);
 	border-radius: 0.3rem;
 	display: flex;
@@ -336,6 +276,7 @@ main {
 	min-height: 18rem;
 	gap: 4rem;
 	background: linear-gradient(to right, #c76617ad, #6439b3a6);
+	background: linear-gradient(to right, #945725, #4b2e80);
 }
 
 .other-section__heading {
@@ -380,77 +321,15 @@ main {
 	font-size: 1.2rem;
 }
 
-/*------------------------------------------------------------ GUL */
-#group-4 > .base_layer {
-	background-color: rgb(10, 10, 10);
-	background-color: rgba(255, 255, 0, 0.219);
-	border: 2px solid rgb(47, 48, 5);
-	transform: translateZ(-300px) scale(2);
-}
-
-#group-4 .mid_layer .infoContainer {
-	margin-bottom: 70rem;
-}
-
-#group-4 > .top_layer {
-	background-color: rgb(10, 10, 10);
-	border: 2px solid rgb(47, 48, 5);
-	transform: translateZ(-300px) scale(2);
-}
-
-/* ----------------------------------------------------------- ORANSJE  */
-
-#group-5 .mid_layer .infoContainer {
-	margin-bottom: 10rem;
-}
-
-#group-5 {
-	position: relative;
-	height: 80vh;
-	z-index: 4;
-}
-
-#group-5 > .base_layer {
-	background-color: rgb(10, 10, 10);
-	border: 2px solid rgb(61, 28, 5);
-	transform: translateZ(-300px) scale(2);
-}
-
-#group-5 > .mid_layer {
-	transform: translateZ(-150px) scale(1.5);
-}
-
-#group-5 > .top_layer {
-	transform: translateZ(0px) scale(1);
-}
-
-/* ------------------------------------ FOOTER HERE -------------------------------------- */
-
 h1 {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 2rem;
 	color: rgb(241, 241, 241);
-	background-color: rgba(169, 115, 182, 0.6);
+	/* background-color: rgba(169, 115, 182, 0.6); */
 }
 
 h2 {
 	color: rgb(241, 241, 241);
-}
-
-.parallax_group {
-	position: relative;
-	height: 100vh;
-	transform-style: preserve-3d;
-}
-
-.base_layer {
-	transform: translateZ(-200px) scale(1.6);
-	z-index: 1;
-}
-
-.mid_layer {
-	transform: translateZ(0);
-	z-index: 2;
 }
 
 .article_title {

@@ -1,4 +1,4 @@
-function Stars({ count = 300, wrapperHeight = 7000 }) {
+function Stars({ count = 300, wrapperHeight = 7500 }) {
 	const stars = Array.from({ length: count }, () => ({
 		top: Math.random() * wrapperHeight + 'px',
 		left: Math.random() * 100 + '%',

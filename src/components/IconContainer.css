@@ -1,6 +1,7 @@
 .icon-container {
 	display: flex;
-	margin-bottom: 116rem;
+
+	margin-top: 2rem;
 	position: absolute;
 	align-items: center;
 	justify-content: center;
@@ -27,6 +28,7 @@
 .icon-container__icon {
 	width: 55px;
 	height: auto;
+	filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.514));
 }
 
 .icon-container__text {
@@ -38,6 +40,7 @@
 	margin-top: 0.8rem;
 	position: absolute;
 	top: 35%;
+	box-shadow: 8px 10px 12px hsla(0, 0%, 0%, 0.325);
 }
 
 .icon-container__logo:hover .icon-container__text {

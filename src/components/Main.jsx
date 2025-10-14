@@ -43,11 +43,12 @@ const projectPhotosDesktop = [
 function Main() {
 	return (
 		<main className="mainContainer">
-			{/* group 1 ----------------------------------------------------------------------------------------------------------------------------------------- */}
-			<section id="group-1" className="parallax_group">
-				<div className="parallax_layer base_layer"></div>
-				<div className="parallax_layer mid_layer">
+			{/* INTRO SECTION ----------------------------------------------------------------------------------------------------------------------------------------- */}
+			<section id="group-1" className="parallax_group intro-section">
+				<div className="intro-section__icons">
 					<IconContainer />
+				</div>
+				<div className="parallax_layer top_layer">
 					<Section
 						title="Hej! va trevligt att se dig här"
 						text={
@@ -69,72 +70,37 @@ function Main() {
 						}
 					/>
 				</div>
-				<div className="parallax_layer top_layer">
-					<Section
-						title="Projekter"
-						text={
-							<>
-								Nedan kan du se flera exempel på olika projekt
-								jag har arbetat med under utbildningen. Jag har
-								fått arbeta både självständigt & i team.
-								Teamarbete har vi lagt mycket fokus på, vilket
-								har gjort att jag utvecklats mycket & lärt mig
-								att bli ett ännu bättre på agilt arbete!
-							</>
-						}
-					/>
-				</div>
 			</section>
 
-			{/* group 2----------------------------------------------------------------------------------------------------------------------------------------- */}
-			<section id="group-2" className="parallax_group">
-				<div className="parallax_layer base_layer"></div>
-
-				<div className="parallax_layer mid_layer">
+			{/* PROJECTS SECTION----------------------------------------------------------------------------------------------------------------------------------------- */}
+			<section id="group-2" className="parallax_group project-section">
+				<Section
+					title="Projekter"
+					text={
+						<>
+							Nedan kan du se flera exempel på olika projekt jag
+							har arbetat med under utbildningen. Jag har fått
+							arbeta både självständigt & i team. Teamarbete har
+							vi lagt mycket fokus på, vilket har gjort att jag
+							utvecklats mycket & lärt mig att bli ett ännu bättre
+							på agilt arbete!
+						</>
+					}
+				/>
+				<div className="parallax_layer mid_layer--over">
 					{/* <p>Another Mid Layer Page</p> */}
 					<EmblaCarousel photos={projectPhotosDesktop} />
 				</div>
+				<div className="parallax_layer mid_layer--under">
+					{/* <p>Another Mid Layer Page</p> */}
+
+					<EmblaCarousel photos={projectPhotosPhone} />
+				</div>
 			</section>
 
-			{/* group 3 -----------------------------------------------------------------------------------------------------------------------------------------  */}
+			{/* CONTACT/INFO SECTION -----------------------------------------------------------------------------------------------------------------------------------------  */}
 			<section id="group-3" className="parallax_group">
-				<div className="parallax_layer base_layer"></div>
-
 				<div className="parallax_layer mid_layer">
-					<section className="contact-section">
-						<article className="contact-section__content">
-							<h3 className="contact-section__heading">
-								Kontakt
-							</h3>
-							<p className="contact-section__txt">
-								Hör gärna av dig till mig!
-							</p>
-						</article>
-
-						<figure className="icon-container__contact">
-							<img
-								className="icon-container__icon--contact"
-								src={Email}
-								alt="Email icon"
-							/>
-							<img
-								className="icon-container__icon--contact"
-								src={Instagram}
-								alt="Instagram icon"
-							/>
-							<img
-								className="icon-container__icon--contact"
-								src={Linkedin}
-								alt="LinkedIn icon"
-							/>
-							<img
-								className="icon-container__icon--contact"
-								src={Phone}
-								alt="Phone icon"
-							/>
-						</figure>
-					</section>
-					{/* SECTION NUMMER TO ETTER CONTACT----------------------------------------- */}
 					<section className="other-section">
 						<article className="other-section__content">
 							<h3 className="other-section__heading">Annat</h3>
@@ -190,57 +156,42 @@ function Main() {
 							</div>
 						</figure>
 					</section>
-				</div>
-				<div className="parallax_layer top_layer">
-					<EmblaCarousel photos={projectPhotosPhone} />
+
+					<section className="contact-section">
+						<article className="contact-section__content">
+							<h3 className="contact-section__heading">
+								Kontakt
+							</h3>
+							<p className="contact-section__txt">
+								Hör gärna av dig till mig!
+							</p>
+						</article>
+
+						<figure className="icon-container__contact">
+							<img
+								className="icon-container__icon--contact"
+								src={Email}
+								alt="Email icon"
+							/>
+							<img
+								className="icon-container__icon--contact"
+								src={Instagram}
+								alt="Instagram icon"
+							/>
+							<img
+								className="icon-container__icon--contact"
+								src={Linkedin}
+								alt="LinkedIn icon"
+							/>
+							<img
+								className="icon-container__icon--contact"
+								src={Phone}
+								alt="Phone icon"
+							/>
+						</figure>
+					</section>
 				</div>
 			</section>
-
-			{/* <section id="group-4" className="parallax_group">
-				<div className="parallax_layer base_layer">
-	
-				</div>
-
-				<div className="parallax_layer mid_layer">
-					<Section
-						title="ARTIKKEL GR. 4"
-						text={
-							<>
-								HER ER ARTIKKEL GRUPPE 4
-								BLABALBALALBALBALBALBALBALBALBLABLABALBALBLABALBALBALBALBALB✨
-								<Spacer height="1rem" />
-							</>
-						}
-					/>
-				</div>
-
-				<div className="parallax_layer top_layer">
-
-				</div>
-			</section>
-
-
-			<section id="group-5" className="parallax_group">
-				<div className="parallax_layer base_layer">
-
-				</div>
-
-				<div className="parallax_layer mid_layer">
-					<Section
-						title="ARTIKKEL GR. 5"
-						text={
-							<>
-								HER ER ARTIKKEL GRUPPE 5
-								BLABALBALALBALBALBALBALBALBALBLABLABALBALBLABALBALBALBALBALB✨
-								<Spacer height="1rem" />
-							</>
-						}
-					/>
-				</div>
-
-				<div className="parallax_layer top_layer">
-				</div>
-			</section> */}
 		</main>
 	);
 }
