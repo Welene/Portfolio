@@ -20,8 +20,8 @@
 }
 
 .embla__slide {
-	max-width: 300px; /* max width of slide */
-	max-height: 300px; /* max height of slide */
+	min-width: 300px;
+	min-height: 300px;
 }
 
 .embla__slide-img {

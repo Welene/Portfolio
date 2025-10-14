@@ -78,12 +78,12 @@ function Main() {
 					title="Projekter"
 					text={
 						<>
-							Nedan kan du se flera exempel på olika projekt jag
-							har arbetat med under utbildningen. Jag har fått
-							arbeta både självständigt & i team. Teamarbete har
-							vi lagt mycket fokus på, vilket har gjort att jag
-							utvecklats mycket & lärt mig att bli ett ännu bättre
-							på agilt arbete!
+							Nedan kan du se exempel på projekt jag har arbetat
+							med under utbildningen. Jag har fått arbeta både
+							självständigt & i team. Vi har lagt mycket fokus på
+							teamarbete, vilket har gjort att jag utvecklats
+							mycket & lärt mig att bli ett ännu bättre på agilt
+							arbete!
 						</>
 					}
 				/>
@@ -168,26 +168,31 @@ function Main() {
 						</article>
 
 						<figure className="icon-container__contact">
-							<img
-								className="icon-container__icon--contact"
-								src={Email}
-								alt="Email icon"
-							/>
-							<img
-								className="icon-container__icon--contact"
-								src={Instagram}
-								alt="Instagram icon"
-							/>
-							<img
-								className="icon-container__icon--contact"
-								src={Linkedin}
-								alt="LinkedIn icon"
-							/>
-							<img
-								className="icon-container__icon--contact"
-								src={Phone}
-								alt="Phone icon"
-							/>
+							<a href="mailto:yourname@email.com">
+								<img
+									className="icon-container__icon--contact"
+									src={Email}
+									alt="Email icon"
+								/>
+							</a>
+							<a
+								href="https://www.instagram.com/helenetheodorsen/"
+								target="_blank">
+								<img
+									className="icon-container__icon--contact"
+									src={Instagram}
+									alt="Instagram icon"
+								/>
+							</a>
+							<a
+								href="https://www.linkedin.com/in/helene-theodorsen-645a20311/"
+								target="_blank">
+								<img
+									className="icon-container__icon--contact"
+									src={Linkedin}
+									alt="LinkedIn icon"
+								/>
+							</a>
 						</figure>
 					</section>
 				</div>
