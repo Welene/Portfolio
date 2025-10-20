@@ -1,5 +1,6 @@
 import Section from '../components/Section';
 import IconContainer from './IconContainer';
+
 import Email from '../assets/contact/email.png';
 import Instagram from '../assets/contact/instagram.png';
 import Linkedin from '../assets/contact/linkedin.png';
@@ -12,33 +13,45 @@ import Draw from '../assets/icons/draw.png';
 import { EmblaCarousel } from './EmblaCarousel';
 import Article from './Article';
 
+// Import all camera photos
+import photo1 from '../assets/photos/1.jpg';
+import photo2 from '../assets/photos/2.jpg';
+import photo3 from '../assets/photos/3.jpg';
+import photo11 from '../assets/photos/11.jpg';
+import photo6 from '../assets/photos/6.jpg';
+import photo7 from '../assets/photos/7.jpg';
+
+// Import all project photos (phone)
+import project1 from '../assets/projects/1.png';
+import project2 from '../assets/projects/2.png';
+import project3 from '../assets/projects/3.png';
+import project4 from '../assets/projects/4.png';
+import project5 from '../assets/projects/5.png';
+import project6 from '../assets/projects/6.png';
+import project1a from '../assets/projects/1a.png';
+
+// Import all project photos (desktop)
+import projectA from '../assets/projects/a.png';
+import projectB from '../assets/projects/b.png';
+import projectC from '../assets/projects/c.png';
+import projectD from '../assets/projects/d.png';
+
 const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
 
-const cameraPhotos = [
-	'/src/assets/photos/1.jpg',
-	'/src/assets/photos/2.jpg',
-	'/src/assets/photos/3.jpg',
-	'/src/assets/photos/11.jpg',
-	'/src/assets/photos/6.jpg',
-	'/src/assets/photos/7.jpg',
-];
+// Arrays using imports
+const cameraPhotos = [photo1, photo2, photo3, photo11, photo6, photo7];
 
 const projectPhotosPhone = [
-	'/src/assets/projects/1.png',
-	'/src/assets/projects/2.png',
-	'/src/assets/projects/3.png',
-	'/src/assets/projects/4.png',
-	'/src/assets/projects/5.png',
-	'/src/assets/projects/6.png',
-	'/src/assets/projects/1a.png',
+	project1,
+	project2,
+	project3,
+	project4,
+	project5,
+	project6,
+	project1a,
 ];
 
-const projectPhotosDesktop = [
-	'/src/assets/projects/a.png',
-	'/src/assets/projects/b.png',
-	'/src/assets/projects/c.png',
-	'/src/assets/projects/d.png',
-];
+const projectPhotosDesktop = [projectA, projectB, projectC, projectD];
 
 function Main() {
 	return (
