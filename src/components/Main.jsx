@@ -4,16 +4,13 @@ import IconContainer from './IconContainer';
 import Email from '../assets/contact/email.png';
 import Instagram from '../assets/contact/instagram.png';
 import Linkedin from '../assets/contact/linkedin.png';
-import Phone from '../assets/contact/smartphone.png';
 
 import gitIcon from '../assets/icons/github.png';
 import Photo from '../assets/icons/photo.png';
 import Draw from '../assets/icons/draw.png';
 
 import { EmblaCarousel } from './EmblaCarousel';
-import Article from './Article';
 
-// Import all camera photos
 import photo1 from '../assets/photos/1.jpg';
 import photo2 from '../assets/photos/2.jpg';
 import photo3 from '../assets/photos/3.jpg';
@@ -21,7 +18,6 @@ import photo11 from '../assets/photos/11.jpg';
 import photo6 from '../assets/photos/6.jpg';
 import photo7 from '../assets/photos/7.jpg';
 
-// Import all project photos (phone)
 import project1 from '../assets/projects/1.png';
 import project2 from '../assets/projects/2.png';
 import project3 from '../assets/projects/3.png';
@@ -30,7 +26,6 @@ import project5 from '../assets/projects/5.png';
 import project6 from '../assets/projects/6.png';
 import project1a from '../assets/projects/1a.png';
 
-// Import all project photos (desktop)
 import projectA from '../assets/projects/a.png';
 import projectB from '../assets/projects/b.png';
 import projectC from '../assets/projects/c.png';
@@ -38,7 +33,6 @@ import projectD from '../assets/projects/d.png';
 
 const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
 
-// Arrays using imports
 const cameraPhotos = [photo1, photo2, photo3, photo11, photo6, photo7];
 
 const projectPhotosPhone = [
@@ -66,8 +60,8 @@ function Main() {
 						title="Hej! va trevligt att se dig här"
 						text={
 							<>
-								Jag är svenskinflyttad från Norge sedan några år
-								tillbaka.
+								Jag är en norskinflyttad tjej som har bott i
+								Sverige i några år.
 								<Spacer height="1rem" />
 								Som en kreativ själ bestämde jag mig för att
 								börja på Frontendutbildningen hösten 2024, ett
@@ -117,9 +111,6 @@ function Main() {
 					<section className="other-section">
 						<article className="other-section__content">
 							<h3 className="other-section__heading">Annat</h3>
-							<p className="other-section__txt">
-								Kolla mina andra projekt:
-							</p>
 						</article>
 
 						<figure className="icon-container__other">
@@ -176,7 +167,7 @@ function Main() {
 								Kontakt
 							</h3>
 							<p className="contact-section__txt">
-								Hör gärna av dig till mig!
+								Hör gärna av dig till mig:
 							</p>
 						</article>
 
