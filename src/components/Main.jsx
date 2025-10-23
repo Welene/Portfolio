@@ -129,7 +129,7 @@ function Main() {
 
 							<div className="icon-item">
 								<a
-									href="https://picflow.com/a/gallery/gal_hHvASBovPKvnOhH9/designer"
+									href="https://moisaart.picflow.com/59p9zhzt82"
 									target="_blank">
 									<img
 										className="icon-container__icon--other"
@@ -144,7 +144,7 @@ function Main() {
 
 							<div className="icon-item">
 								<a
-									href="https://picflow.com/a/gallery/ZVwlOjZ378xNh82f/designer"
+									href="https://moisaart.picflow.com/xs2ltt0twg"
 									target="_blank">
 									<img
 										className="icon-container__icon--other"

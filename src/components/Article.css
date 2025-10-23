@@ -22,6 +22,7 @@
 	font-size: 2rem;
 	font-style: bold;
 	color: rgb(241, 241, 241);
+	filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.384));
 }
 
 .article_text {
@@ -30,4 +31,5 @@
 		sans-serif;
 	font-size: 1.3rem;
 	color: rgb(241, 241, 241);
+	filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.384));
 }
