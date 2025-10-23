@@ -46,7 +46,7 @@
 	margin-top: 0.8rem;
 	position: absolute;
 	top: 35%;
-	box-shadow: 8px 10px 12px hsla(0, 0%, 0%, 0.325);
+	filter: drop-shadow(0 10px 2px rgba(0, 0, 0, 0.514));
 }
 
 .icon-container__logo:hover .icon-container__text {
@@ -91,56 +91,12 @@
 	}
 }
 
-.icon-container__logo:hover .icon-container__text--html {
-	display: inline-block;
-	color: rgb(240, 240, 240);
-	animation: typing-html 1s steps(9, end),
-		blink 0.6s step-end infinite alternate;
-}
-@keyframes typing-html {
-	from {
-		width: 0ch;
-	}
-	to {
-		width: 9ch;
-	}
-}
-
 .icon-container__logo:hover .icon-container__text--css {
 	display: inline-block;
-	color: rgb(240, 240, 240);
-	animation: typing-css 1s steps(8, end),
-		blink 0.6s step-end infinite alternate;
+	animation: typing-css 0.3s steps(4, end),
+		blink 0.4s step-end infinite alternate;
 }
 @keyframes typing-css {
-	from {
-		width: 0ch;
-	}
-	to {
-		width: 8ch;
-	}
-}
-
-.icon-container__logo:hover .icon-container__text--css {
-	display: inline-block;
-	animation: typing-css 0.3s steps(3, end),
-		blink 0.6s step-end infinite alternate;
-}
-@keyframes typing-css {
-	from {
-		width: 0ch;
-	}
-	to {
-		width: 3ch;
-	}
-}
-
-.icon-container__logo:hover .icon-container__text--html {
-	display: inline-block;
-	animation: typing-html 0.5s steps(4, end),
-		blink 0.6s step-end infinite alternate;
-}
-@keyframes typing-html {
 	from {
 		width: 0ch;
 	}
@@ -149,26 +105,12 @@
 	}
 }
 
-.icon-container__logo:hover .icon-container__text--js {
+.icon-container__logo:hover .icon-container__text--html {
 	display: inline-block;
-	animation: typing-js 1s steps(10, end),
-		blink 0.6s step-end infinite alternate;
+	animation: typing-html 0.5s steps(5, end),
+		blink 0.4s step-end infinite alternate;
 }
-@keyframes typing-js {
-	from {
-		width: 0ch;
-	}
-	to {
-		width: 10ch;
-	}
-}
-
-.icon-container__logo:hover .icon-container__text--react {
-	display: inline-block;
-	animation: typing-react 0.5s steps(5, end),
-		blink 0.6s step-end infinite alternate;
-}
-@keyframes typing-react {
+@keyframes typing-html {
 	from {
 		width: 0ch;
 	}
@@ -177,9 +119,37 @@
 	}
 }
 
+.icon-container__logo:hover .icon-container__text--js {
+	display: inline-block;
+	animation: typing-js 0.8s steps(12, end),
+		blink 0.4s step-end infinite alternate;
+}
+@keyframes typing-js {
+	from {
+		width: 0ch;
+	}
+	to {
+		width: 12ch;
+	}
+}
+
+.icon-container__logo:hover .icon-container__text--react {
+	display: inline-block;
+	animation: typing-react 0.5s steps(6, end),
+		blink 0.5s step-end infinite alternate;
+}
+@keyframes typing-react {
+	from {
+		width: 0ch;
+	}
+	to {
+		width: 6ch;
+	}
+}
+
 .icon-container__logo:hover .icon-container__text--node {
 	display: inline-block;
-	animation: typing-node 0.7s steps(7, end),
+	animation: typing-node 0.7s steps(9, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-node {
@@ -187,13 +157,13 @@
 		width: 0ch;
 	}
 	to {
-		width: 7ch;
+		width: 9ch;
 	}
 }
 
 .icon-container__logo:hover .icon-container__text--vsc {
 	display: inline-block;
-	animation: typing-vsc 0.7s steps(7, end),
+	animation: typing-vsc 0.7s steps(9, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-vsc {
@@ -201,13 +171,13 @@
 		width: 0ch;
 	}
 	to {
-		width: 7ch;
+		width: 9ch;
 	}
 }
 
 .icon-container__logo:hover .icon-container__text--figma {
 	display: inline-block;
-	animation: typing-figma 0.5s steps(5, end),
+	animation: typing-figma 0.5s steps(6, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-figma {
@@ -215,13 +185,13 @@
 		width: 0ch;
 	}
 	to {
-		width: 5ch;
+		width: 6ch;
 	}
 }
 
 .icon-container__logo:hover .icon-container__text--mongo {
 	display: inline-block;
-	animation: typing-mongo 0.7s steps(7, end),
+	animation: typing-mongo 0.7s steps(9, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-mongo {
@@ -229,13 +199,13 @@
 		width: 0ch;
 	}
 	to {
-		width: 7ch;
+		width: 9ch;
 	}
 }
 
 .icon-container__logo:hover .icon-container__text--dyna {
 	display: inline-block;
-	animation: typing-dyna 0.8s steps(8, end),
+	animation: typing-dyna 0.8s steps(10, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-dyna {
@@ -243,7 +213,7 @@
 		width: 0ch;
 	}
 	to {
-		width: 8ch;
+		width: 10ch;
 	}
 }
 
@@ -263,7 +233,7 @@
 
 .icon-container__logo:hover .icon-container__text--git {
 	display: inline-block;
-	animation: typing-git 0.6s steps(6, end),
+	animation: typing-git 0.6s steps(8, end),
 		blink 0.6s step-end infinite alternate;
 }
 @keyframes typing-git {
@@ -271,15 +241,15 @@
 		width: 0ch;
 	}
 	to {
-		width: 6ch;
+		width: 8ch;
 	}
 }
 
 .icon-container__logo:hover .icon-container__text--agile {
 	display: inline-block;
 	color: rgb(240, 240, 240);
-	animation: typing-git 0.6s steps(6, end),
-		blink 0.6s step-end infinite alternate;
+	animation: typing-git 0.4s steps(5, end),
+		blink 0.4s step-end infinite alternate;
 }
 
 @keyframes typing-agile {

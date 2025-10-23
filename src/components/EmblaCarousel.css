@@ -7,6 +7,12 @@
 .embla__slide {
 	flex: 0 0 auto;
 	min-width: 0;
+	min-width: 300px;
+	min-height: 300px;
+}
+
+.embla__slide:hover {
+	cursor: pointer;
 }
 
 .embla {
@@ -17,11 +23,6 @@
 .embla__container {
 	display: flex;
 	gap: 1rem;
-}
-
-.embla__slide {
-	min-width: 300px;
-	min-height: 300px;
 }
 
 .embla__slide-img {

@@ -29,3 +29,11 @@
 	opacity: 1;
 	transform: translateY(0);
 }
+
+.arrow__up:hover {
+	transition: transform 0.5s ease;
+}
+
+.arrow__up:hover {
+	transform: scale(1.2);
+}
