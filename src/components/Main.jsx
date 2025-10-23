@@ -11,12 +11,12 @@ import Draw from '../assets/icons/draw.png';
 
 import { EmblaCarousel } from './EmblaCarousel';
 
-import photo1 from '../assets/photos/1.jpg';
-import photo2 from '../assets/photos/2.jpg';
-import photo3 from '../assets/photos/3.jpg';
-import photo11 from '../assets/photos/11.jpg';
-import photo6 from '../assets/photos/6.jpg';
-import photo7 from '../assets/photos/7.jpg';
+// import photo1 from '../assets/photos/1.jpg';
+// import photo2 from '../assets/photos/2.jpg';
+// import photo3 from '../assets/photos/3.jpg';
+// import photo11 from '../assets/photos/11.jpg';
+// import photo6 from '../assets/photos/6.jpg';
+// import photo7 from '../assets/photos/7.jpg';
 
 import project1 from '../assets/projects/1.png';
 import project2 from '../assets/projects/2.png';
