@@ -33,8 +33,6 @@ import projectD from '../assets/projects/d.png';
 
 const Spacer = ({ height = '1rem' }) => <div style={{ height }} />;
 
-const cameraPhotos = [photo1, photo2, photo3, photo11, photo6, photo7];
-
 const projectPhotosPhone = [
 	project1,
 	project2,
